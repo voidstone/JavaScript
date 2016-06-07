@@ -1,0 +1,28 @@
+function processData(input) {
+   var rows = input.split('\n');
+    var cash = rows[0].split(' ').map(Number)[1];
+    var myArray = rows[1].split(' ').map(Number);
+    
+    myArray.sort(function(a, b){return a-b});
+     var sum = 0;
+     for(var i = 0; i < myArray.length; i++) {
+
+          if(sum <= cash ) {
+             sum +=myArray[i];
+            
+          } else {
+            console.log(i-1);break;
+          }
+        }
+} 
+
+process.stdin.resume();
+process.stdin.setEncoding("ascii");
+_input = "";
+process.stdin.on("data", function (input) {
+    _input += input;
+});
+
+process.stdin.on("end", function () {
+   processData(_input);
+});
