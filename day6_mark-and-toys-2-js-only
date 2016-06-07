@@ -1,3 +1,6 @@
+https://www.hackerrank.com/contests/7days-javascript/challenges/mark-and-toys-2-js-only
+
+
 function processData(input) {
    var rows = input.split('\n');
     var cash = rows[0].split(' ').map(Number)[1];
